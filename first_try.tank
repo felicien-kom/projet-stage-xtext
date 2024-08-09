@@ -1,0 +1,84 @@
+Processus Processus_rehabilitation_tanks (
+     Besoin BesoinPopulationRetenu (codeBesoin='B001')
+)
+<
+    Projet ProjetReceptionne (codeProjetR='P001', contenuR=null, dateRecep=null, codePlanC=null)
+>
+{
+    Tache TacheComposite_rehabilitation_tanks_AI (
+        Besoin BesoinPopulation (codeBesoin='B001', descriptionBesoin='Besoin réhabilitation Tanks')
+    )
+    <
+        Projet ProjetReceptionne (codeProjetR='P001', contenuR=null, dateRecep=null, codePlanC=null)
+    >
+    {
+    	Etape Definition_de_l_interet_general (
+	        Besoin BesoinPopulation (codeBesoin='B001', descriptionBesoin='Besoin réhabilitation Tanks')
+	    )
+	    <
+	        Projet NomProjet1 (codeProjet='P001', contenuProjet=null, codeBesoin='B001')
+	    >
+	    
+	    Etape Etude_et_selection_des_acteurs (
+	        Projet NomProjet2 (codeProjet='P001')
+	    )
+	    <
+	        Acteur (codeActeur='A001', 'A002', 'A003', typeActeur='ActeursInstitutionnels', 'ActeursSociaux', 
+	            'ActeursEconomiques', nomActeur='MLA', 'Panchayat', 'Etat', 'UE,', 'NABARD', 'TUA', 'ONG', codeProjet='P001')
+	    >
+	    
+	    Etape Organisation_de_productions_des_biens_et_services (
+	        Acteur (codeActeur='A001', 'A002', 'A003', 
+	            typeActeur='Acteurs Institutionnels', 'Acteurs Sociaux', 'Acteurs Economiques')
+	    )
+	    <
+	        Contrat (codeContrat=null, contenuContrat= null, codeActeur='A001', 'A002', 'A003', 
+	            typeActeur='Acteurs Institutionnels', 'Acteurs Sociaux', 'Acteurs Economiques')
+	    >
+	    
+	    Etape Definition_des_regles_et_plan_d_evaluation (
+	        FinancementI (codeFinancementI=null, typeFinancement=null, nomBailleur=null)
+	        Contrat (codeContrat=null)
+	        FinancementE (codeFinancementE='CFE0001','CFE0002', typeFinancement='Economique', nomBailleur='UE', 'NABARD')
+	    )
+	    <
+	        PlanEvaluation (codePlanE=null, codeFinancementI=null, codeFinancementE='CFE0001','CFE0002', typeFinancement='Economique',
+	            nomBailleur='UE', 'NABARD')
+	    >
+	    
+	    Etape Mise_en_place_de_l_instance_de_coordination (
+	        PlanEvaluation (codePlanE=null)
+	    )
+	    <
+	        PlanCommunication (codePlanC= null, codePlanE= null)
+	    >
+	    
+	    Etape Reception_de_travaux (
+	        PlanCommunication (codePlanC=null, codeActeurs='A001', 'A002', 'A003')
+	    )
+	    <
+	        Projet ProjetReceptionne (codeProjetR='P001', contenuR=null, dateRecep= null, codePlanC=null)
+	    >
+	    
+    }
+
+    Tache TacheComposite_rehabilitation_tanks_AS (
+        Besoin BesoinPopulation (codeBesoin='B001', descriptionBesoin= 'Besoin réhabilitation Tanks')
+    )
+    <
+        Projet ProjetReceptionne (codeProjetR='P001', contenuR= null, dateRecep= null, codePlanC=null)
+    >
+    {
+    	/* Completer avec les étapes de cette tache ici. */
+    }
+
+    Tache TacheComposite_rehabilitation_tanks_AE (
+        Besoin BesoinPopulation (codeBesoin='B001', descriptionBesoin= 'Besoin réhabilitation Tanks')
+    )
+    <
+        Projet ProjetReceptionne (codeProjetR='P001', contenuR= null, dateRecep= null, codePlanC=null)
+    >
+    {
+    	/* Completer avec les étapes de cette tache ici. */
+    }
+}
