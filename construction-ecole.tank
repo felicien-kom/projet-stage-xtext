@@ -1,0 +1,9 @@
+Processus Construction_d_un_lycee () <>
+{
+	Tache Definition_des_cahiers_de_charges () <> {}
+	Tache Redaction_des_appels_d_offres () <> {}
+	Tache Selection_des_entreprises () <> {}
+	Tache Attribution_des_financements () <> {}
+	Tache Suivi_du_chantier () <> {}
+	Tache Reception_des_travaux () <> {}
+}
